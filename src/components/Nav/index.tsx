@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
-const items = [
+const ITEMS = [
   {
     href: '/about',
     title: 'About',
@@ -29,7 +29,7 @@ export const Nav = () => {
   return (
     <div className="flex items-center justify-center ">
       <ul className="hidden  text-xl font-bold xs:flex ">
-        {items.map((item, index) => {
+        {ITEMS.map((item, index) => {
           return (
             <li key={index} className="ml-4">
               <Link href={item.href}>{item.title}</Link>
@@ -57,7 +57,7 @@ export const SpNav = ({ opened }: Props) => {
       }`}
     >
       <ul className="mt-[109px]">
-        {items.map((item, index) => {
+        {ITEMS.map((item, index) => {
           return (
             <li key={index} className="text-[28px] text-white">
               <Link href={item.href}>{item.title}</Link>
