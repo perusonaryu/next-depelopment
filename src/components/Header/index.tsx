@@ -20,7 +20,7 @@ export const Header: FC = () => {
           className="absolute top-[25%] left-4 xs:hidden z-20 text-white"
           color={opened ? '#fff' : '#25262B'}
         />
-        <div className="mx-4 flex h-[65px] max-w-7xl items-center justify-center xs:m-auto xs:justify-between">
+        <div className="mx-4 flex h-[65px] max-w-screen-md items-center justify-center xs:m-auto xs:justify-between">
           <h2 className="text-lg font-bold">
             <Link href="/">RYU IT University</Link>
           </h2>
