@@ -1,0 +1,78 @@
+import { ListItem } from '@mantine/core';
+import { SelectItems } from '@mantine/core/lib/components/Select/SelectItems/SelectItems';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const icons = [
+  {
+    href: '/icons/Twitter.svg',
+    alt: 'twitter icon',
+  },
+  {
+    href: '/icons/Facebook.svg',
+    alt: 'facebook icon',
+  },
+  {
+    href: '/icons/RSS.svg',
+    alt: 'RSS icon',
+  },
+];
+
+export const Hero = () => {
+  return (
+    <div className="flex px-4 h-[248px] w-full items-center justify-center bg-m_pink-6 text-white">
+      <div className="block xs:flex w-full max-w-7xl items-center justify-between">
+        <div className='mb-[44px] xs:mb-0'>
+          <h1 className="text-4xl">Ryu IT University</h1>
+          <p className="text-base">りゅうのポートフォリオのためのページです</p>
+        </div>
+        <div className="flex">
+          {icons.map((icon, index) => {
+            return (
+              <Link href="/" key="index">
+                <a className="mr-3">
+                  <Image
+                    src={icon.href}
+                    alt={icon.alt}
+                    width={25}
+                    height={25}
+                  />
+                </a>
+              </Link>
+            );
+          })}
+          {/* <Link href="/">
+            <a className="mr-3">
+              <Image
+                src="/icons/Twitter.svg"
+                alt="twitter icon"
+                width={21}
+                height={17}
+              />
+            </a>
+          </Link>
+          <Link href="/">
+            <a className="mr-3">
+              <Image
+                src="/icons/Twitter.svg"
+                alt="twitter icon"
+                width={21}
+                height={17}
+              />
+            </a>
+          </Link>
+          <Link href="/">
+            <a className="mr-3">
+              <Image
+                src="/icons/Twitter.svg"
+                alt="twitter icon"
+                width={21}
+                height={17}
+              />
+            </a>
+          </Link> */}
+        </div>
+      </div>
+    </div>
+  );
+};

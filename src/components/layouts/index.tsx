@@ -9,7 +9,7 @@ export const Layout: FC<Body> = (props) => {
   return (
     <div className="mt-11 mb-9  xs:my-0 text-[#25262B]">
         <Header/>
-      <div className="flex grow flex-col justify-center">{props.children}</div>
+      <div>{props.children}</div>
     </div>
   );
 };
