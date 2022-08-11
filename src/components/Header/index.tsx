@@ -27,13 +27,6 @@ export const Header: FC = () => {
 
           <Nav />
         </div>
-        <img
-          className="absolute top-[25%] right-4 xs:hidden"
-          src="/icons/darkModeIcon.svg"
-          alt="dark mode icon"
-          width={34}
-          height={34}
-        />
       </header>
       <SpNav opened={opened} />
     </>
