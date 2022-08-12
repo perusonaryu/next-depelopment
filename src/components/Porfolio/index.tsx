@@ -4,7 +4,7 @@ import { PortfolioItem } from "src/components/Porfolio/PortfolioItem";
 import { Button } from '@mantine/core';
 export const Portfolio:FC = () => {
   return (
-    <div className="m-auto mb-[61px] max-w-screen-md px-4 xs:mb-[101px] xs:px-0">
+    <div className="mb-[61px] xs:mb-[101px]">
       <h2 className="mb-5 text-[26px] font-bold">Portfolio</h2>
       <div className="mb-6 w-full border-b-2 border-b-m_gray-2"></div>
 
