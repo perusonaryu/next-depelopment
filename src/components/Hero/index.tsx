@@ -29,7 +29,7 @@ export const Hero = () => {
         <div className="flex">
           {ICONS.map((icon, index) => {
             return (
-              <Link href="/" key="index">
+              <Link href="/" key={index}>
                 <a className="mr-3">
                   <Image
                     src={icon.href}
@@ -41,36 +41,6 @@ export const Hero = () => {
               </Link>
             );
           })}
-          {/* <Link href="/">
-            <a className="mr-3">
-              <Image
-                src="/icons/Twitter.svg"
-                alt="twitter icon"
-                width={21}
-                height={17}
-              />
-            </a>
-          </Link>
-          <Link href="/">
-            <a className="mr-3">
-              <Image
-                src="/icons/Twitter.svg"
-                alt="twitter icon"
-                width={21}
-                height={17}
-              />
-            </a>
-          </Link>
-          <Link href="/">
-            <a className="mr-3">
-              <Image
-                src="/icons/Twitter.svg"
-                alt="twitter icon"
-                width={21}
-                height={17}
-              />
-            </a>
-          </Link> */}
         </div>
       </div>
     </div>
