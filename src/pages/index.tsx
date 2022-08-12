@@ -4,6 +4,7 @@ import { Hero } from 'src/components/Hero';
 import { Blog } from 'src/components/Blog';
 import { Portfolio } from 'src/components/Porfolio';
 import { Github } from 'src/components/Github';
+import { Twitter } from 'src/components/Twitter';
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
         <Portfolio />
         <div className="grid grid-cols-1 xs:grid-cols-2 xs:gap-20">
           <Github />
+          <Twitter />
         </div>
       </div>
     </Layout>
