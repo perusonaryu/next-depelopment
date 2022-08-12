@@ -52,13 +52,15 @@ export const BlogItem = () => {
       })}
 
       <Link href="/">
-        <Button
-          color="dark"
-          radius="xl"
-          className="mx-auto block h-[45px] w-[105px] text-base"
-        >
-          View ALL
-        </Button>
+        <a>
+          <Button
+            color="dark"
+            radius="xl"
+            className="mx-auto block h-[45px] w-[105px] text-base"
+          >
+            View ALL
+          </Button>
+        </a>
       </Link>
     </>
   );
