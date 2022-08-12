@@ -18,10 +18,6 @@ export const Blog: FC = () => {
       >
         View ALL
       </Button>
-      {/* <Link href="/">
-        <a>
-        </a>
-      </Link> */}
     </div>
   );
 };
