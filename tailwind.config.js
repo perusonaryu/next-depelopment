@@ -187,5 +187,8 @@ module.exports = {
       colors: mantineColors,
     },
   },
+  corePlugins: {
+    preflight: false, // リセットCSSの無効化
+  },
   plugins: [require('@tailwindcss/line-clamp')],
 };

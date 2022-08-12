@@ -1,5 +1,3 @@
-import { Button } from '@mantine/core';
-import Link from 'next/link';
 
 const ITEMS = [
   {
@@ -51,17 +49,6 @@ export const BlogItem = () => {
         );
       })}
 
-      <Link href="/">
-        <a>
-          <Button
-            color="dark"
-            radius="xl"
-            className="mx-auto block h-[45px] w-[105px] text-base"
-          >
-            View ALL
-          </Button>
-        </a>
-      </Link>
     </>
   );
 };
