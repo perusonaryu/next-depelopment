@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import Head from 'next/head';
 import { Header } from 'src/components/Header';
 import { Footer } from 'src/components/Footer';
 
@@ -8,10 +9,16 @@ type Body = {
 
 export const Layout: FC<Body> = (props) => {
   return (
-    <div className="relative min-h-screen mt-11 mb-9 pb-[65.5px] box-border text-[#25262B] xs:my-0">
-      <Header />
-      <div>{props.children}</div>
-      <Footer />
-    </div>
+    <>
+      <Head>
+        <title>Shimabu IT University</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div className="relative mt-11 mb-9 box-border min-h-screen pb-[65.5px] text-[#25262B] xs:my-0">
+        <Header />
+        <div>{props.children}</div>
+        <Footer />
+      </div>
+    </>
   );
 };
