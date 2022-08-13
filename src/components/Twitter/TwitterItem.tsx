@@ -48,13 +48,13 @@ export const TwitterItem = () => {
                 </p>
               </div>
               <p className="text-m_dark-6">
-                <span className="mb-5 inline-block">
+                <span className="mb-4 inline-block">
                   {item.text1}
                 </span>
-                <span className="mb-5 inline-block">
+                <span className="mb-4 inline-block">
                   {item.text2}
                 </span>
-                <span className="mb-5 inline-block">
+                <span className="mb-4 inline-block">
                   {item.text3}
                 </span>
                 <span className="inline-block text-m_blue-6">

@@ -14,7 +14,7 @@ export const Github:FC = () => {
         href="/"
         color="dark"
         radius="xl"
-        className="mx-auto block h-[45px] w-[105px] text-base"
+        className="mx-auto block h-[45px] w-[164px] text-base"
       >
         View ALL
       </Button>
