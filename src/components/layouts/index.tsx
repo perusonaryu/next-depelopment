@@ -8,7 +8,7 @@ type Body = {
 
 export const Layout: FC<Body> = (props) => {
   return (
-    <div className="mt-11 mb-9 text-[#25262B] xs:my-0">
+    <div className="relative min-h-screen mt-11 mb-9 pb-[65.5px] box-border text-[#25262B] xs:my-0">
       <Header />
       <div>{props.children}</div>
       <Footer />
