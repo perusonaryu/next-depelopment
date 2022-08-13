@@ -5,7 +5,7 @@ import { TwitterItem } from 'src/components/Twitter/TwitterItem';
 
 export const Twitter: FC = () => {
   return (
-    <div className="mb-[61px] xs:mb-[101px]">
+    <div className="mb-[61px]">
       <h2 className="mb-5 text-[26px] font-bold">Twitter</h2>
       <div className="mb-6 w-full border-b-2 border-b-m_gray-2"></div>
       <TwitterItem />
