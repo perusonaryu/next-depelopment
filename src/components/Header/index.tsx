@@ -29,7 +29,7 @@ export const Header: FC = () => {
         />
         <div className="mx-4 flex h-[65px] max-w-screen-md items-center justify-center xs:m-auto xs:justify-between">
           <h2 className="text-lg font-bold">
-            <Link href="/">RYU IT University</Link>
+            <Link href="/">Shimabu IT University</Link>
           </h2>
 
           <Nav />

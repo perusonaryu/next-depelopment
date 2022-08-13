@@ -23,8 +23,8 @@ export const Hero = () => {
     <div className="flex px-4 mb-20 h-[248px] w-full items-center justify-center bg-m_pink-6 text-white">
       <div className="block xs:flex w-full max-w-screen-md items-center justify-between">
         <div className='mb-[44px] xs:mb-0'>
-          <h1 className="text-4xl font-bold">Ryu IT University</h1>
-          <p className="text-base">りゅうのポートフォリオのためのページです</p>
+          <h1 className="text-4xl font-bold">Shimabu IT University</h1>
+          <p className="text-base">しまぶーのポートフォリオのためのページです</p>
         </div>
         <div className="flex">
           {ICONS.map((icon, index) => {
