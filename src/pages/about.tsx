@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { Layout } from 'src/components/layouts';
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <Layout>
       <div className="m-auto max-w-screen-md  px-4 xs:px-0">
@@ -20,4 +20,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default About;
