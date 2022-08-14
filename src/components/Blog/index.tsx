@@ -11,7 +11,7 @@ export const Blog: FC = () => {
       <BlogItem quantity={5}/>
       <Button
         component={NextLink}
-        href="/"
+        href="/blog"
         color="dark"
         radius="xl"
         className="mx-auto block h-[45px] w-[105px] text-base"

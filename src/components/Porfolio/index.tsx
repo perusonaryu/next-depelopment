@@ -11,7 +11,7 @@ export const Portfolio:FC = () => {
       <PortfolioItem/>
       <Button
         component={NextLink}
-        href="/"
+        href="/portfolio"
         color="dark"
         radius="xl"
         className="mx-auto block h-[45px] w-[105px] text-base"
