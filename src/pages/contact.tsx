@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { TextInput, Textarea, Button } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { Layout } from 'src/components/layouts';
+import { Layout } from 'src/layout';
 
 const Contact: NextPage = () => {
   const form = useForm({

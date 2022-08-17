@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { Loader } from '@mantine/core';
-import { Layout } from 'src/components/layouts';
+import { Layout } from 'src/layout';
 import { BlogItem } from 'src/components/Blog/BlogItem';
 
 const Blog: NextPage = () => {
