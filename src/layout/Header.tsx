@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from 'react';
 import { Burger } from '@mantine/core';
 import Link from 'next/link';
-import { Nav, SpNav } from 'src/components/Nav';
+import { Nav, SpNav } from 'src/layout/Nav';
 
 export const Header: FC = () => {
   const [opened, setOpened] = useState(false);

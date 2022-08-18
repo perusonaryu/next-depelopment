@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import Head from 'next/head';
-import { Header } from 'src/components/Header';
-import { Footer } from 'src/components/Footer';
+import { Header } from 'src/layout/Header';
+import { Footer } from 'src/layout/Footer';
 
 type Body = {
   children: ReactNode;

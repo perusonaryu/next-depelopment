@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Layout } from 'src/components/layouts';
+import { Layout } from 'src/layout';
 import { Hero } from 'src/components/Hero';
 import { Blog } from 'src/components/Blog';
 import { Portfolio } from 'src/components/Porfolio';

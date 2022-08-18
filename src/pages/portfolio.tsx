@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Layout } from 'src/components/layouts';
+import { Layout } from 'src/layout';
 import { PortfolioItem } from 'src/components/Porfolio/PortfolioItem';
 
 const Portfolio: NextPage = () => {
