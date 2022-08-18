@@ -17,11 +17,11 @@ export const Header: FC = () => {
 
   return (
     <>
-      <header className="relative w-full">
+      <header className="relative w-full xs:px-[10px]">
         <Burger
           opened={opened}
           onClick={() => {
-            setOpened((o) => !o)
+            setOpened((o) => !o);
           }}
           title={title}
           className="absolute top-[25%] left-4 z-20 text-white xs:hidden"
