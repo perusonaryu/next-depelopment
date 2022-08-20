@@ -5,7 +5,10 @@ export const pagesPath = {
   "blog": {
     $url: (url?: { hash?: string }) => ({ pathname: '/blog' as const, hash: url?.hash }),
     "detail": {
-      $url: (url?: { hash?: string }) => ({ pathname: '/blog/detail' as const, hash: url?.hash })
+      $url: (url?: { hash?: string }) => ({ pathname: '/blog/detail' as const, hash: url?.hash }),
+      _id: (id: string | number) => ({
+        $url: (url?: { hash?: string }) => ({ pathname: '/blog/detail/[id]' as const, query: { id }, hash: url?.hash })
+      })
     }
   },
   "contact": {

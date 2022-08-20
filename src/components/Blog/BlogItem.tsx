@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ITEMS } from 'src/components/Blog/blogItemData';
+import { ITEMS } from 'src/components/Blog/BlogItemData';
 
 type Props = {
   quantity: number;
@@ -10,7 +10,7 @@ export const BlogItem = ({ quantity }: Props) => {
     <>
       {ITEMS.slice(0, quantity).map((item, index) => {
         return (
-          <Link href="/blog/detail" key={index}>
+          <Link href={"/blog/detail/" + item.id} key={index}>
             <a>
               <div className="mb-6">
                 <h3 className="mb-2 text-[22px] font-bold text-m_dark-6">
