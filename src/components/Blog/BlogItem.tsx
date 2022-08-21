@@ -1,77 +1,5 @@
 import Link from 'next/link';
-
-const ITEMS = [
-  {
-    id: 1,
-    title: 'This is a header',
-    description:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.',
-    createdAt: '2022.07.11',
-  },
-  {
-    id: 2,
-    title: 'This is a header',
-    description:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.',
-    createdAt: '2022.07.11',
-  },
-  {
-    id: 3,
-    title: 'This is a header',
-    description:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.',
-    createdAt: '2022.07.11',
-  },
-  {
-    id: 4,
-    title: 'This is a header',
-    description:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.',
-    createdAt: '2022.07.11',
-  },
-  {
-    id: 5,
-    title: 'This is a header',
-    description:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.',
-    createdAt: '2022.07.11',
-  },
-  {
-    id: 6,
-    title: 'This is a header',
-    description:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.',
-    createdAt: '2022.07.11',
-  },
-  {
-    id: 7,
-    title: 'This is a header',
-    description:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.',
-    createdAt: '2022.07.11',
-  },
-  {
-    id: 8,
-    title: 'This is a header',
-    description:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.',
-    createdAt: '2022.07.11',
-  },
-  {
-    id: 9,
-    title: 'This is a header',
-    description:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.',
-    createdAt: '2022.07.11',
-  },
-  {
-    id: 10,
-    title: 'This is a header',
-    description:
-      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do ametsint. Velit officia consequat duis enim velit mollit.',
-    createdAt: '2022.07.11',
-  },
-];
+import { ITEMS } from 'src/components/Blog/BlogItemData';
 
 type Props = {
   quantity: number;
@@ -82,7 +10,7 @@ export const BlogItem = ({ quantity }: Props) => {
     <>
       {ITEMS.slice(0, quantity).map((item, index) => {
         return (
-          <Link href="/blog/detail" key={index}>
+          <Link href={"/blog/detail/" + item.id} key={index}>
             <a>
               <div className="mb-6">
                 <h3 className="mb-2 text-[22px] font-bold text-m_dark-6">
