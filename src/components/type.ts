@@ -1,6 +1,6 @@
 export type Props = {
     quantity?: number;
-    blogData?:[
+    blogData:[
       blogItem:{
         id: string;
         title: string;
