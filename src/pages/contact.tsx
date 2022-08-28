@@ -8,13 +8,14 @@ import { Props } from 'src/components/type';
 const Contact: NextPage = () => {
   const form = useForm({
     initialValues: {
+      email: '',
       name: '',
       subject: '',
       message: '',
     },
 
     validate: {
-      // email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'メールアドレスの形式が異なります'),
       subject: (value) => (value ? null : '件名を入力してください'),
       name: (value) => (value ? null : 'お名前を入力してください'),
       message: (value) => (value ? null : 'メッセージを入力してください'),
@@ -42,6 +43,12 @@ const Contact: NextPage = () => {
               contactHandleClick();
             })}
           >
+            <TextInput
+              label="Email"
+              placeholder="test@test.com"
+              {...form.getInputProps('email')}
+              className="mb-6"
+            />
             <TextInput
               label="Subject"
               placeholder="contact subject"
