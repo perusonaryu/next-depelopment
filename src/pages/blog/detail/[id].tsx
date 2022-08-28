@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const blogRes = await client
     .get({
       endpoint: 'blog',
-      contentId: blogId,
+      contentId: `${blogId}`,
     })
     .then((res) => {
       blogItem = res;
@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-const Blog: NextPage = ({ blogItem,blogState }: any) => {
+const Blog: NextPage = ({ blogItem, blogState }: any) => {
   return (
     <Layout>
       <div className="m-auto max-w-screen-md  px-4 xs:px-0">
@@ -55,7 +55,7 @@ const Blog: NextPage = ({ blogItem,blogState }: any) => {
             </div>
           ) : (
             <></>
-          ) }
+          )}
         </div>
       </div>
     </Layout>
