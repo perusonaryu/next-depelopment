@@ -23,7 +23,8 @@ export const BlogItem: FC<Props> = ({ quantity, blogData }) => {
             </a>
           </Link>
         );
-      })}
+      }
+      )}
     </>
   );
 };

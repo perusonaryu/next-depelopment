@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const blogRes = await client.get({
     endpoint: 'blog',
   });
-  const blogData = await blogRes;
+  const blogData = await blogRes.contents;
 
   return {
     props: {
