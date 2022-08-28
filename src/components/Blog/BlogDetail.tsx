@@ -1,7 +1,7 @@
 import { blogItemType } from 'src/components/Blog/types';
 
 
-export const BlogDetail:React.FC<blogItemType> = ({title,description,createdAt}:blogItemType) => {
+export const BlogDetail:React.FC<blogItemType> = ({title,description,createdAt}) => {
   return (
     <>
       <h2 className="mb-5 text-[26px] font-bold">{title}</h2>
