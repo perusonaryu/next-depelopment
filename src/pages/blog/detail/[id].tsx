@@ -11,7 +11,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const blogId = params!.id;
+  const blogId = await params!.id;
   let blogItem = '';
   let blogState = 0;
   // blogデータ取得
