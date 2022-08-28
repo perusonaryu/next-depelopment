@@ -2,44 +2,59 @@ import type { NextPage } from 'next';
 import { TextInput, Textarea, Button } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { Layout } from 'src/layout';
+import { client } from 'src/lib/client';
+import { Props } from 'src/components/type';
 
 const Contact: NextPage = () => {
   const form = useForm({
     initialValues: {
       name: '',
-      email: '',
+      subject: '',
       message: '',
     },
 
     validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
-      name: (value) => (value ? null : 'Invalid name'),
-      message: (value) => (value ? null : 'Invalid message'),
+      // email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+      subject: (value) => (value ? null : '件名を入力してください'),
+      name: (value) => (value ? null : 'お名前を入力してください'),
+      message: (value) => (value ? null : 'メッセージを入力してください'),
     },
   });
+
+  const contactHandleClick = () => {
+    const contactValues: Props['contactValues'] = form.values;
+    client
+      .create({
+        endpoint: 'contact',
+        content: contactValues,
+      })
+      .then((res: any) => form.reset());
+  };
+
   return (
     <Layout>
       <div className="m-auto max-w-screen-md  px-4 xs:px-0">
         <div className="mt-10 mb-16">
           <h2 className="mb-5 text-[26px] font-bold">Contact</h2>
           <div className="mb-6 w-full border-b-2 border-b-m_gray-2"></div>
-          <form onSubmit={form.onSubmit((values) => console.log(values))}>
+          <form
+            onSubmit={form.onSubmit(() => {
+              contactHandleClick();
+            })}
+          >
             <TextInput
-              required
-              label="Email"
-              placeholder="your@email.com"
-              {...form.getInputProps('email')}
+              label="Subject"
+              placeholder="contact subject"
+              {...form.getInputProps('subject')}
               className="mb-6"
             />
             <TextInput
-              required
               label="Name"
               placeholder="Taro Yamada"
               {...form.getInputProps('name')}
               className="mb-6"
             />
             <Textarea
-              required
               label="Your message"
               placeholder="I want to order your goods"
               {...form.getInputProps('message')}
