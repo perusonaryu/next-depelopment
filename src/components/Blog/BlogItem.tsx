@@ -1,11 +1,12 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import { Props } from 'src/components/type';
+import moment from 'moment';
 
 export const BlogItem: FC<Props> = ({ quantity, blogData }) => {
   return (
     <>
-      {blogData.slice(0, quantity).map((item, index) => {
+      {blogData!.slice(0, quantity).map((item, index) => {
         return (
           <Link href={'/blog/detail/' + item.id} key={index}>
             <a>
@@ -17,14 +18,13 @@ export const BlogItem: FC<Props> = ({ quantity, blogData }) => {
                   {item.description}
                 </p>
                 <p className="text-xs font-bold text-m_dark-2">
-                  {item.createdAt}
+                  {moment(item.createdAt).format('YYYY.MM.DD')}
                 </p>
               </div>
             </a>
           </Link>
         );
-      }
-      )}
+      })}
     </>
   );
 };
