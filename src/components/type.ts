@@ -1,6 +1,6 @@
 export type Props = {
     quantity?: number;
-    blogData:[
+    blogData?:[
       blogItem:{
         id: string;
         title: string;
@@ -13,4 +13,16 @@ export type Props = {
       name:string;
       message:string;
     }
+    portfolioData?:[
+      portfolioItem:{
+        id:string;
+        title:string;
+        description:string;
+        startDate:Date;
+        endDate:Date;
+        thumbnail:{
+          url:string;
+        }
+      }
+    ]
   };

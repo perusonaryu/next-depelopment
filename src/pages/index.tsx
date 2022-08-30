@@ -15,20 +15,27 @@ export const getStaticProps: GetStaticProps = async () => {
   });
   const blogData = await blogRes.contents;
 
+  // portfolioデータ取得
+  const portfolioRes = await client.get({
+    endpoint: 'portfolio',
+  });
+  const portfolioData = await portfolioRes.contents;
+
   return {
     props: {
       blogData,
+      portfolioData,
     },
     revalidate: 60 * 10,
   };
 };
 
-const Home: NextPage<Props> = ({ blogData }) => {
+const Home: NextPage<Props> = ({ blogData, portfolioData }) => {
   return (
     <Layout>
       <div className="m-auto max-w-screen-md px-4">
         <Blog blogData={blogData} />
-        <Portfolio />
+        <Portfolio portfolioData={portfolioData} />
         <div className="grid grid-cols-1 xs:grid-cols-2 xs:gap-20">
           <Github />
           <Twitter />
