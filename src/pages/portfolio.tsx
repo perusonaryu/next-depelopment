@@ -10,7 +10,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const portfolioRes = await client.get({
     endpoint: 'portfolio',
   });
-  const portfolioData = await portfolioRes.contents;
+  const portfolioData = portfolioRes.contents;
 
   return {
     props: {
