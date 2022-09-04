@@ -7,22 +7,17 @@ export const Header: FC = () => {
   const [opened, setOpened] = useState(false);
   const title = opened ? 'Close navigation' : 'Open navigation';
 
-  useEffect(() => {
-    if (opened) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-  }, [opened]);
+  const handleClick = () => {
+    setOpened((o) => !o);
+    document.body.style.overflow = opened ? 'hidden' : 'auto';
+  };
 
   return (
     <>
       <header className="relative w-full xs:px-[10px]">
         <Burger
           opened={opened}
-          onClick={() => {
-            setOpened((o) => !o);
-          }}
+          onClick={handleClick}
           title={title}
           className="absolute top-[25%] left-4 z-20 text-white xs:hidden"
           color={opened ? '#fff' : '#25262B'}
