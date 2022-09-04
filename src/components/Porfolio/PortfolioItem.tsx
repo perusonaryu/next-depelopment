@@ -15,7 +15,7 @@ export const PortfolioItem: FC<Props> = ({ portfolioData }) => {
               <img
                 src={item.thumbnail.url}
                 alt="thumbnail"
-                className="w-full object-cover h-[184px]"
+                className="h-[184px] w-full object-cover"
               />
             </div>
             <h3 className="mb-2 text-[22px] font-bold text-m_dark-6">
