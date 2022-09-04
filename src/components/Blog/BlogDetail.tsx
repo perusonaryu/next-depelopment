@@ -13,7 +13,7 @@ export const BlogDetail: React.FC<blogItemType> = ({
       <p className="mb-2 text-xs font-bold text-m_dark-2">
         {`${moment(createdAt).format('YYYY.MM.DD')} `}
       </p>
-      <p className="text-base text-m_dark-6 line-clamp-2">{description}</p>
+      <p className="text-base text-m_dark-6">{description}</p>
     </>
   );
 };
