@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
-
+import { DarkModeToggle } from 'src/components/DarkmodeToggle';
 
 const ITEMS = [
   {
@@ -37,14 +36,7 @@ export const Nav = () => {
           );
         })}
       </ul>
-      <button className="absolute top-[25%] right-4 xs:static ml-4">
-        <Image
-          src="/icons/darkModeIcon.svg"
-          alt="dark mode icon"
-          width={34}
-          height={34}
-        />
-      </button>
+      <DarkModeToggle  />
     </div>
   );
 };
