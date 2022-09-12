@@ -1,7 +1,6 @@
 import 'src/lib/mantine/mantineBase.css';
 import 'src/lib/tailwind.css';
 import type { AppProps } from 'next/app';
-import { useState } from 'react';
 import {
   MantineProvider,
   ColorSchemeProvider,
