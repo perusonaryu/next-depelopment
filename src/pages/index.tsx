@@ -10,15 +10,17 @@ import { Props } from 'src/components/type';
 import { TwitterApi } from 'twitter-api-v2';
 
 export const getStaticProps: GetStaticProps = async () => {
-  // Twitter取得
+  
   const twitterClient = new TwitterApi(process.env.TWITTER_BEARER_TOKEN || '');
   const readOnlyClient = twitterClient.readOnly;
-  const { data } = await readOnlyClient.v2.userByUsername('BJp3AXN4lexJXZf', {
-    'user.fields': ['profile_image_url'],
-  });
+  const { data } = await readOnlyClient.v2.userByUsername(process.env.TWITTER_USER_NAME || '');
+  // Twitter userID取得
+  const twitterUserId = data.id; 
   // Tweet取得
-  const { tweets } = await readOnlyClient.v2.userTimeline(data.id, {
+  const { tweets, includes } = await readOnlyClient.v2.userTimeline(data.id, {
     'tweet.fields': ['created_at'],
+    'user.fields': ['name', 'profile_image_url', 'username'],
+    expansions: ['author_id'],
     max_results: 5,
   });
   const twitterData = { userInfo: data, tweets: tweets };
