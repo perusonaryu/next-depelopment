@@ -24,26 +24,13 @@ export const TwitterItem: FC<Props> = ({ twitterData }) => {
             />
             <div>
               <div className="flex  items-center">
-                <h3 className="mr-2 text-base font-bold  text-m_dark-6">
-                  {userInfo.name}
-                </h3>
+                <h3 className="mr-2 text-base font-bold">{userInfo.name}</h3>
                 <p className="text-xs text-m_dark-2">
-                  {userInfo.username + '・' + dateFormat(item.created_at)}
+                  {'@' + userInfo.username + '・' + dateFormat(item.created_at)}
                 </p>
               </div>
-              <p className="text-m_dark-6">
+              <p>
                 <span className="mb-4 inline-block">{item.text}</span>
-                {/* <span className="mb-4 inline-block">
-                  {item.text2}
-                </span>
-                <span className="mb-4 inline-block">
-                  {item.text3}
-                </span>
-                <span className="inline-block text-m_blue-6">
-                  <Link href={item.text4}>
-                    <a>{item.text4}</a>
-                  </Link>
-                </span> */}
               </p>
             </div>
           </div>

@@ -28,10 +28,10 @@ export const GithubItem = () => {
       {ITEMS.map((item, index) => {
         return (
           <div className={`mb-10 ${index >= 3 ? 'hidden xs:block' : ''}`} key={index}>
-            <h3 className="mb-2 text-lg font-bold text-m_dark-6">
+            <h3 className="mb-2 text-lg font-bold">
               {item.title}
             </h3>
-            <p className="mb-2 text-base text-m_dark-6">{item.text}</p>
+            <p className="mb-2 text-base">{item.text}</p>
             <div className="mb-2 flex">
               <p className="mr-5 flex items-center text-xs text-m_dark-2">
                 <span className="mr-[5px] flex items-center">
@@ -63,19 +63,19 @@ export const GithubItem = () => {
             </div>
             <ul className="flex list-inside list-disc text-xs">
               <li className="mr-4 text-[#3178C6]">
-                <span className="ml-[-10px] mr-1.5 font-bold text-m_dark-6">
+                <span className="ml-[-10px] mr-1.5 font-bold">
                   TypeScript
                 </span>
                 <span className="text-m_dark-2">65.5%</span>
               </li>
               <li className="mr-4 text-[#F1E05A]">
-                <span className="ml-[-10px] mr-1.5 font-bold text-m_dark-6">
+                <span className="ml-[-10px] mr-1.5 font-bold">
                   JavaScript
                 </span>
                 <span className="text-m_dark-2">24.5%</span>
               </li>
               <li className="mr-4 text-[#EDEDED]">
-                <span className="ml-[-10px] mr-1.5 font-bold text-m_dark-6">
+                <span className="ml-[-10px] mr-1.5 font-bold">
                   Other
                 </span>
                 <span className="text-m_dark-2">10%</span>
