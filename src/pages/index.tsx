@@ -23,8 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
     expansions: ['author_id'],
     max_results: 5,
   });
-  const twitterData = { userInfo: data, tweets: tweets };
-
+  const twitterData = { userInfo: {...includes.users[0]}, tweets: tweets };
   // blogデータ取得
   const blogRes = await client.get({
     endpoint: 'blog',

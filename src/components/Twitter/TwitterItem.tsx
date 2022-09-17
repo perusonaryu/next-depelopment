@@ -15,7 +15,7 @@ export const TwitterItem: FC<Props> = ({ twitterData }) => {
   };
   return (
     <>
-      {tweets.map((item, index) => {
+      {tweets.map((item) => {
         return (
           <div className="mb-14 flex" key={item.id}>
             <Avatar
