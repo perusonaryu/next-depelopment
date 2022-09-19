@@ -18,10 +18,10 @@ export const PortfolioItem: FC<Props> = ({ portfolioData }) => {
                 className="h-[184px] w-full object-cover"
               />
             </div>
-            <h3 className="mb-2 text-[22px] font-bold text-m_dark-6">
+            <h3 className="mb-2 text-[22px] font-bold">
               {item.title}
             </h3>
-            <p className="mb-2 text-base text-m_dark-6 line-clamp-2">
+            <p className="mb-2 text-base line-clamp-2">
               {item.description}
             </p>
             <p className="text-xs text-m_dark-2">{`${moment(
